@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css实现水平垂直居中的5种方式</title>
+    <style>
+        .container {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+            background-color: #64748b;
+        }
+        .content {
+            width: 100px;
+            height: 100px;
+        }
+        .container.c1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .c1 .content {
+            background-color: #ef4444;
+        }
+        .container.c2 {
+            display: grid;
+            place-items: center;
+        }
+        .c2 .content {
+            background-color: #f97316;
+        }
+        .container.c3 {
+            position: relative;
+        }
+        .c3 .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f59e0b;
+        }
+        .container.c4 {
+            position: relative;
+        }
+        .c4 .content {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #eab308;
+        }
+        .container.c5 {
+            width: 100vw;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .c5 .content {
+            display: inline-block;
+            background-color: #84cc16;
+        }
+    </style>
+</head>
+<body>
+    <h2>使用 Flexbox</h2>
+    <div class="container c1">
+        <div class="content"></div>
+    </div>
+    <h2>使用 Grid</h2>
+    <div class="container c2">
+        <div class="content"></div>
+    </div>
+    <h2>使用 绝对定位+transform</h2>
+    <div class="container c3">
+        <div class="content"></div>
+    </div>
+    <h2>使用 绝对定位+margin</h2>
+    <div class="container c4">
+        <div class="content"></div>
+    </div>
+    <h2>使用表格布局</h2>
+    <div class="container c5">
+        <div class="content"></div>
+    </div>
+</body>
+</html>
